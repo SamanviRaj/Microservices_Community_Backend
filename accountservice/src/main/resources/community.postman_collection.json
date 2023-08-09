@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "de362006-c9ab-4a58-ad1d-4f648b6464b4",
+		"name": "community",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "15590561"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"item6\",\r\n    \"lastName\":\"description6\",\r\n    \"password\":\"password12\",\r\n    \"dob\":\"24-08-2013\",\r\n    \"email\":\"1234545@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9012/api/v1/users/create"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add new community",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"communityName\": \"NC JASMIN Residency Ameenpur Sangareddy 2\",\r\n    \"createdDate\":\"26-07-2023\",\r\n    \"users\":{\r\n        \"firstName\": \"Rajesh\",\r\n        \"lastName\":\"T\",\r\n        \"password\":\"password12\",\r\n        \"dob\":\"26-06-2013\",\r\n        \"email\":\"1234545@gmail.com\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9013/api/v1/community/create"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9013/api/v1/community"
+			},
+			"response": []
+		},
+		{
+			"name": "add nw acount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"accountName\":\"acccname NC JASMIN\",\r\n    \"description\":\"description\",\r\n    \"totalBalance\":\"tb\",\r\n    \"outstandingBalance\":\"outstandingBalance\",\r\n    \"incomeAmount\":\"incomeAmount\",\r\n    \"expenseAmount\":\"expenseAmount\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9014/api/v1/accounts/create"
+			},
+			"response": []
+		}
+	]
+}

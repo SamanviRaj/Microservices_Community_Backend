@@ -30,4 +30,9 @@ public class AccountsController {
     public ResponseEntity<Account> createAcount(@RequestBody AccountDTO accountDTO){
         return new ResponseEntity<>(accountService.createAccount(AppUtils.mapToAccountEntity(accountDTO)),HttpStatus.OK);
     }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteAccount(@PathVariable Long id){
+        accountService.deleteAccount(id);
+        return new ResponseEntity<>("Transaction deleted Sucessfully",HttpStatus.OK);
+    }
 }
