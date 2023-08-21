@@ -15,13 +15,9 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private String firstName;
-    @Column
-    private String lasttName;
+    private String fullName;
     @Column
     private String password;
-    @Column
-    private String dob;
     @Column
     private String email;
 }

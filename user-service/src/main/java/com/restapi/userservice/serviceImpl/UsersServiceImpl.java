@@ -39,4 +39,14 @@ public class UsersServiceImpl implements UsersService {
     public Users deleteUser(Long id) {
         return null;
     }
+
+    @Override
+    public Users findUserByEmailAndPassword(String email, String password) {
+        return usersRepository.findByEmailAndPassword(email, password);
+    }
+
+    @Override
+    public Users findUserByEmail(String email) {
+        return null;
+    }
 }

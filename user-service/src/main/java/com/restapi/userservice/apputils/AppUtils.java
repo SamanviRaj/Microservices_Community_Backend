@@ -7,23 +7,25 @@ public class AppUtils {
 
     public static UsersDTO mapToUsersDTO(Users users){
         UsersDTO dtoObj = new UsersDTO();
-        dtoObj.setFirstName(users.getFirstName());
-        dtoObj.setLastName(users.getLasttName());
+        dtoObj.setFullName(users.getFullName());
         dtoObj.setPassword(users.getPassword());
-        dtoObj.setDob(users.getDob());
         dtoObj.setEmail(users.getEmail());
         return dtoObj;
     }
 
     public static Users mapToUsersEntity(UsersDTO usersDTO){
         Users entityObj = new Users();
-        entityObj.setFirstName(usersDTO.getFirstName());
-        entityObj.setLasttName(usersDTO.getLastName());
+        entityObj.setFullName(usersDTO.getFullName());
         entityObj.setPassword(usersDTO.getPassword());
-        entityObj.setDob(usersDTO.getDob());
         entityObj.setEmail(usersDTO.getEmail());
         return entityObj;
     }
 
+    public static UsersDTO mapToUsersSignin(Users users){
+        UsersDTO dtoObj = new UsersDTO();
+        dtoObj.setPassword(users.getPassword());
+        dtoObj.setEmail(users.getEmail());
+        return dtoObj;
+    }
 
 }
